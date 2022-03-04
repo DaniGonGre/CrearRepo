@@ -9,7 +9,7 @@ public class Main {
         try {
             String pathAlFich = "/home/dam1/IdeaProjects/CrearProyecto/ficheroToken.propierties";
             github = new GitHubBuilder()
-                    //.withOAuthToken("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")
+                    //.withOAuthToken("AÑADE TU TOKEN AQUI")
                     .fromPropertyFile(pathAlFich)
                     .build();
         } catch (IOException e) {
