@@ -1,0 +1,12 @@
+# Project exclude paths
+/.gradle/
+/build/
+/build/classes/java/main/
+/ficheroToken.propierties
+.idea
+gradlew
+settings.gradle
+.gradle
+gradle
+gradlew.bat
+build.gradle
