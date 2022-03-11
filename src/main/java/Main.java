@@ -1,16 +1,19 @@
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
+
+import javax.swing.*;
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
         GitHub github = null;
         try {
-            String pathAlFich = "/home/dam1/IdeaProjects/CrearProyecto/ficheroToken.propierties";
+            String token = JOptionPane.showInputDialog("Introduce el token de GitHub: ");
+        //    String pathAlFich = "/home/dam1/IdeaProjects/CrearProyecto/ficheroToken.propierties";
             github = new GitHubBuilder()
-                    //.withOAuthToken("AÑADE TU TOKEN AQUI")
-                    .fromPropertyFile(pathAlFich)
+                    .withOAuthToken(token)
+             //       .fromPropertyFile(pathAlFich)
                     .build();
         } catch (IOException e) {
             e.printStackTrace();
@@ -20,7 +23,7 @@ public class Main {
         try {
             //GHRepository repo2 = github.createRepository("miRepo").create();
             repo = github.createRepository(
-                    "Nuevo_Repositorio", "this is my new repository",
+                    "RepositorioNuevo", "Este es el nuevo repositorio",
                     "https://www.kohsuke.org/", true/*public*/);
         } catch (IOException e) {
             e.printStackTrace();
