@@ -2,7 +2,6 @@
 /.gradle/
 /build/
 /build/classes/java/main/
-/ficheroToken.propierties
 .idea
 gradlew
 settings.gradle
@@ -10,3 +9,4 @@ settings.gradle
 gradle
 gradlew.bat
 build.gradle
+ficheroToken.propierties
